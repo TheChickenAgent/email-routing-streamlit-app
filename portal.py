@@ -70,8 +70,7 @@ if processing:
 
         st.write("Processed!")
         st.write("The configuration file will be saved as", file_name, "locally.")
-        st.write("If you are using the portal not using the localhost, you can use the \"Download JSON\" button below.")
-        st.write("Then it will be saved as a text file.\nPlease change the extension to .json.")
+        st.write("If you are using the portal not using the localhost, you can use the \"Download JSON\" button below.\nThen it will be saved as a text file.\nPlease change the extension to .json.")
     outfile.close()
         
     with open(file_name) as f:
