@@ -69,11 +69,14 @@ if processing:
         json.dump(output_dictionary, outfile, indent=4)
 
         st.write("Processed!")
-        st.write("The configuration file will be saved as", file_name)
-        st.write(" ")  # ensures nice spacing
+        st.write("The configuration file will be saved as", file_name, "locally.")
+        st.write("If you are using the portal not using the localhost, you can use the \"Download JSON\" button below.")
+        st.write("Then it will be saved as a text file.\nPlease change the extension to .json.")
+    outfile.close()
         
     with open(file_name) as f:
         st.download_button('Download JSON', f)
-
-
+    f.close()
+    
+st.write(" ")  # ensures nice spacing
 st.write("Powered by Streamlit.")
