@@ -71,6 +71,9 @@ if processing:
         st.write("Processed!")
         st.write("The configuration file will be saved as", file_name)
         st.write(" ")  # ensures nice spacing
+        
+    with open(file_name) as f:
+        st.download_button('Download JSON', f)
 
 
 st.write("Powered by Streamlit.")
